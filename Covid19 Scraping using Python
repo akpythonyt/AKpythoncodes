@@ -1,0 +1,13 @@
+import requests
+from bs4 import BeautifulSoup
+
+Url="https://www.worldometers.info/country/india"
+req=requests.get(Url)
+bsobj=BeautifulSoup(req.text,'html.parser')
+
+data=bsobj.find_all("div",class_="maincounter-number")
+
+
+print("totalcases", data[0].text.strip())
+print("total deaths", data[1].text.strip())
+print("total recoverd", data[2].text.strip()
