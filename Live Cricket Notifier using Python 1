@@ -1,0 +1,11 @@
+import sports
+i=sports.get_match("Cricket","Team1","Team2")
+import time
+from plyer import notification
+notification.notify(
+     title="IPL Scores Updates",
+     message=str(i),
+     app_icon="Path of Image",
+     timeout=10,
+)
+time.sleep(10)
