@@ -1,0 +1,3 @@
+import moviepy.editor as mp
+clip=mp.VideoFileClip(r'Path of your video file')
+clip.audio.write_audiofile(r'Path of your audio file')
