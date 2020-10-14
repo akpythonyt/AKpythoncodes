@@ -1,0 +1,27 @@
+from tkinter import *
+import wikipedia
+def wiki():
+        search = entry.get()
+        answer_value = wikipedia.summary(search)
+        answer.insert(INSERT, answer_value)
+ak = Tk()
+ak.config(bg="blue")
+ak.title("AKPEDIA")
+firstframe  = Frame(ak)
+entry = Entry(firstframe)
+entry.pack()
+button = Button(firstframe, text="search", command=wiki)
+button.pack()
+firstframe.pack(side = TOP)
+
+
+secondframe = Frame(ak)
+scrollbar = Scrollbar(secondframe)
+scrollbar.pack(side=RIGHT, fill=Y)
+answer =  Text(secondframe, width=75, height=30, yscrollcommand = scrollbar.set)
+scrollbar.config(command=answer.yview)
+answer.pack()
+secondframe.pack()
+
+ak.mainloop()
+    
