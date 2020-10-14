@@ -1,0 +1,14 @@
+from PIL import Image
+import stepic
+     #Encryption
+
+im= Image.open('PATH OF IMAGE')
+im1 = stepic.encode(im, b'Hello Python')
+im1.save('PATH OF ENCRYPTED IMAGE')
+im1 = Image.open('PATH OF ENCRYPTED IMAGE')
+im1.show()
+
+    # Decryption
+im2 = Image.open('PATH OF ENCRYPTED IMAGE')
+Image = stepic.decode(im2)
+print(Image)
