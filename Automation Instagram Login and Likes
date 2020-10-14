@@ -22,3 +22,5 @@ def autolike():
 
 logininfo()
 autolike()
+
+#Chance of Get getting error while liking the pictures
