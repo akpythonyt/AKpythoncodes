@@ -1,0 +1,9 @@
+import sports
+Matchinfo=sports.get_sport("CRICKET")
+from pynotifier import Notification
+
+Notification(
+     title="IPL Live score Updates",
+     description=str(Matchinfo),
+     duration=60,
+     ).send()
