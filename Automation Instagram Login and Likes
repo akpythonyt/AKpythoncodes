@@ -1,0 +1,24 @@
+from selenium import webdriver
+import time
+web=webdriver.Chrome('D:\chromedriver')
+web.get("https://www.instagram.com/")
+
+def logininfo():
+     time.sleep(1)    
+     Login=web.find_element_by_xpath("/html/body/div[1]/section/main/article/div[2]/div[1]/div/form/div/div[1]/div/label/input")
+     Login.send_keys("Your Username")
+     time.sleep(1)
+     password=web.find_element_by_xpath("/html/body/div[1]/section/main/article/div[2]/div[1]/div/form/div/div[2]/div/label/input")
+     password.send_keys("your Password")
+     Button=web.find_element_by_xpath("/html/body/div[1]/section/main/article/div[2]/div[1]/div/form/div/div[3]/button")
+     Button.click()
+def autolike():
+     time.sleep(1)
+     pic = web.find_element_by_xpath("/html/body/div[1]/section/main/section/div/div[2]/div/article[1]/div[2]/div/div/div[2]")
+     time.sleep(1)
+     Button=web.find_element_by_xpath("/html/body/div[1]/section/main/div/div[1]/article/div[3]/section[1]/span[1]/button")
+     time.sleep(1)
+     Button.click()
+
+logininfo()
+autolike()
