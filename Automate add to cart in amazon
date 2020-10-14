@@ -1,0 +1,5 @@
+from selenium import webdriver
+web=webdriver.Chrome('D:\chromedriver')
+producturl="https://www.amazon.com/MOSISO-MacBook-Keyboard-Protector-Compatible/dp/B07KG6TR7X"
+web.get(producturl)
+web.find_element_by_xpath('/html/body/div[2]/div[1]/div[7]/div[5]/div[1]/div[4]/div/div/div[1]/div/div/div[1]/div/div[2]/div/form/div/div/div[15]/div[1]/span/span/span/input').click()
