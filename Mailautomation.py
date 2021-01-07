@@ -1,9 +1,9 @@
 import yagmail
 
-receiver = "queriesakpython@yahoo.com"
+receiver = "reciever email"
 message = ("Hello there from Yagmai",'Test1.pdf')
 
-sender = yagmail.SMTP("mailt5582@gmail.com")
+sender = yagmail.SMTP("sender email")
 sender.send(
     to=receiver,
     subject="Yagmail test with attachment",
