@@ -6,10 +6,10 @@ time.sleep(4)
 #Automating the login
 def login():#/html/body/div[1]/section/main/article/div[2]/div[1]/div/form/div/div[1]/div/label/input
     Username=browser.find_element_by_xpath("/html/body/div[1]/section/main/article/div[2]/div[1]/div/form/div/div[1]/div/label/input")
-    Username.send_keys("dummy7783")
+    Username.send_keys("username")
     time.sleep(4)
     password=browser.find_element_by_xpath("/html/body/div[1]/section/main/article/div[2]/div[1]/div/form/div/div[2]/div/label/input")
-    password.send_keys("17mtcs02")
+    password.send_keys("password")
     password.submit()
     time.sleep(5)
 #Automate the notifications
